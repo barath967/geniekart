@@ -10,23 +10,55 @@
       background: linear-gradient(135deg, #f7f4ff, #fff9e6);
       color: #35175a;
       padding-top: 120px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     h2 {
       font-size: 2rem;
       margin-bottom: 10px;
+      animation: fadeIn 1s ease-in-out;
     }
     p {
       font-size: 1.2rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .spinner {
+      margin: 30px auto;
+      border: 8px solid #f3e9ff;
+      border-top: 8px solid #c79c00;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
     }
   </style>
+
   <script>
     setTimeout(() => {
-      window.location.replace("https://script.google.com/macros/s/AKfycbzCaCJ-rYeh3uMRAa-3hzjhxqEvozZPsZCAKyS0XKsjoEyb-JtC7f203SIN6jZ05-S8/exec");
+      window.location.replace("https://script.google.com/macros/s/AKfycbx2wIE0LptZA9RxkghuE0H7UwLd8TzZB5rTRFKYHUN9vhdjrESR4utYFMLiXziX1oHx/exec");
     }, 1000);
   </script>
 </head>
+
 <body>
-  <h2>Redirecting to Genie Kart...</h2>
-  <p>If not redirected automatically, <a href="https://script.google.com/macros/s/AKfycbzCaCJ-rYeh3uMRAa-3hzjhxqEvozZPsZCAKyS0XKsjoEyb-JtC7f203SIN6jZ05-S8/exec">click here</a>.</p>
+  <h2>✨ Redirecting to Genie Kart...</h2>
+  <div class="spinner"></div>
+  <p>If not redirected automatically, 
+     <a href="https://script.google.com/macros/s/AKfycbx2wIE0LptZA9RxkghuE0H7UwLd8TzZB5rTRFKYHUN9vhdjrESR4utYFMLiXziX1oHx/exec">
+       click here
+     </a>.
+  </p>
 </body>
 </html>
